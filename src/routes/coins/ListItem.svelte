@@ -1,4 +1,7 @@
 <article class="contact-card">
+  <slot name="button">
+    <span class="missing">btn</span>
+  </slot>
   <h2>
     <slot name="coinName">
       <span class="missing">Unknown coin</span>

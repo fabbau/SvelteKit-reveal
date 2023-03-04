@@ -1,11 +1,11 @@
 <script>
 	import Header from './Header.svelte';
-	import PresentationItem from '$lib/components//PresentationItem.svelte';
+	import PresentationContainer from '$lib/components//PresentationContainer.svelte';
 	import './styles.css';
 </script>
 
 <div class="app">
-  <PresentationItem />
+  <PresentationContainer />
 	<Header />
 	<main>
 		<slot />

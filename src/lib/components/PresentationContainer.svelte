@@ -8,6 +8,7 @@
   import 'reveal.js/dist/theme/black.css'
   import 'reveal.js/plugin/highlight/monokai.css'
   import { onMount, onDestroy } from 'svelte'
+  import PresentationItem from './PresentationItem.svelte'
 
   /**
    * @type {Reveal.Api}
@@ -39,52 +40,7 @@
 <div class="presentation-wrapper">
   <div class="reveal deck">
     <div class="slides">
-      <section>
-        <h3>Default</h3>
-      </section>
-
-      <section data-transition="zoom">
-        <h3>data-transition: zoom</h3>
-      </section>
-
-      <section data-transition="zoom-in fade-out">
-        <h3>data-transition: zoom-in fade-out</h3>
-      </section>
-
-      <section>
-        <h3>Default</h3>
-      </section>
-
-      <section data-transition="convex">
-        <h3>data-transition: convex</h3>
-      </section>
-
-      <section data-transition="convex-in concave-out">
-        <h3>data-transition: convex-in concave-out</h3>
-      </section>
-
-      <section>
-        <section data-transition="zoom">
-          <h3>Default</h3>
-        </section>
-        <section data-transition="concave">
-          <h3>data-transition: concave</h3>
-        </section>
-        <section data-transition="convex-in fade-out">
-          <h3>data-transition: convex-in fade-out</h3>
-        </section>
-        <section>
-          <h3>Default</h3>
-        </section>
-      </section>
-
-      <section data-transition="none">
-        <h3>data-transition: none</h3>
-      </section>
-
-      <section>
-        <h3>Default</h3>
-      </section>
+      <PresentationItem />
     </div>
   </div>
 </div>

@@ -10,6 +10,7 @@
     import { onMount, onDestroy } from 'svelte';
 
     import PresentationItem from './PresentationItem.svelte'
+    import PresentationItem2 from './PresentationItem2.svelte'
   
   
     /**
@@ -30,8 +31,8 @@
       });
       deck.initialize();
       console.log('deck');
-      console.log(typeof deck);
-      console.log(deck);
+    //   console.log(typeof deck);
+    //   console.log(deck);
     });
   
     onDestroy(() => {
@@ -43,6 +44,7 @@
     <div class="reveal deck">
       <div class="slides">
         <PresentationItem />
+        <PresentationItem2 />
       </div>
     </div>
   </div>

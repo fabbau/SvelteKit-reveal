@@ -1,28 +1,28 @@
 <script>
   // import { getCoins } from '../../api';
 
-  import ListItem from './ListItem.svelte';
-  import RiMoneyDollarCircleLine from '$lib/icons/RiMoneyDollarCircleLine.svelte';
+  import ListItem from './ListItem.svelte'
+  import RiMoneyDollarCircleLine from '$lib/icons/RiMoneyDollarCircleLine.svelte'
 
   /**
    * @type {any}
    */
-  export let data;
+  export let data
   /**
    * @type {any}
    */
-  let favouriteCoins = [];
-  $: console.log('coisn page data');
-  $: console.dir(data);
-  $: console.log('favouriteCoins');
-  $: console.log(favouriteCoins);
+  let favouriteCoins = []
+  $: console.log('coisn page data')
+  // $: console.dir(data);
+  $: console.log('favouriteCoins')
+  $: console.log(favouriteCoins)
 
   /**
    * @param {any} coinId
    */
   function addToFavourite(coinId) {
     if (!favouriteCoins.includes(coinId)) {
-      favouriteCoins = [...favouriteCoins, coinId];
+      favouriteCoins = [...favouriteCoins, coinId]
     }
   }
   /**
@@ -30,7 +30,7 @@
    */
   function removeFromFavourite(coinId) {
     if (favouriteCoins.includes(coinId)) {
-      favouriteCoins = favouriteCoins.filter((/** @type {any} */ id) => id !== coinId);
+      favouriteCoins = favouriteCoins.filter((/** @type {any} */ id) => id !== coinId)
     }
   }
 
@@ -38,7 +38,7 @@
    * @param {number} change
    */
   function setIspositive(change) {
-    return change > 0 ? true : false;
+    return change > 0 ? true : false
   }
 
   // /**
@@ -58,40 +58,41 @@
   <div class="column">
     <p>All coins</p>
     <!-- <ul> -->
-      {#each data.data as coin}
-        <ListItem>
-          <svelte:fragment slot="button">
-            <button class="addToFavs" on:click={() => addToFavourite(coin.id)}
-              >{@html '&#10084;'}</button
-            >
-          </svelte:fragment>
-          <svelte:fragment slot="coinName">
-            <!-- svelte-ignore a11y-missing-attribute -->
-            <img src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${coin.id}.png`} />
-            {coin.name}
-          </svelte:fragment>
-          <svelte:fragment slot="coinPrice">
-            <RiMoneyDollarCircleLine />
-            {coin.quote.USD.price.toFixed(2)}
-          </svelte:fragment>
-
-          <span
-            slot="change"
-            class:isPositive={setIspositive(+coin.quote.USD.percent_change_24h)}
-            class="change"
+    {#each data.data as coin}
+      <ListItem>
+        <svelte:fragment slot="button">
+          <button
+            class="addToFavs"
+            on:click={() => addToFavourite(coin.id)}>{@html '&#10084;'}</button
           >
-            {+coin.quote.USD.percent_change_24h.toFixed(2)} <span>%</span>
-          </span>
+        </svelte:fragment>
+        <svelte:fragment slot="coinName">
+          <!-- svelte-ignore a11y-missing-attribute -->
+          <img src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${coin.id}.png`} />
+          {coin.name}
+        </svelte:fragment>
+        <svelte:fragment slot="coinPrice">
+          <RiMoneyDollarCircleLine />
+          {coin.quote.USD.price.toFixed(2)}
+        </svelte:fragment>
 
-          <span slot="volumen">
-            Vol: {+coin.quote.USD.volume_24h.toFixed(0)}
-          </span>
+        <span
+          slot="change"
+          class:isPositive={setIspositive(+coin.quote.USD.percent_change_24h)}
+          class="change"
+        >
+          {+coin.quote.USD.percent_change_24h.toFixed(2)} <span>%</span>
+        </span>
 
-          <span slot="marketCap">
-            {+coin.quote.USD.market_cap.toFixed(0)} USD
-          </span>
-        </ListItem>
-      {/each}
+        <span slot="volumen">
+          Vol: {+coin.quote.USD.volume_24h.toFixed(0)}
+        </span>
+
+        <span slot="marketCap">
+          {+coin.quote.USD.market_cap.toFixed(0)} USD
+        </span>
+      </ListItem>
+    {/each}
     <!-- </ul> -->
   </div>
 
@@ -114,8 +115,9 @@
       {#if favouriteCoins.includes(coin.id)}
         <ListItem>
           <svelte:fragment slot="button">
-            <button class="addToFavs" on:click={() => removeFromFavourite(coin.id)}
-              >{@html '&#10084;'}</button
+            <button
+              class="addToFavs"
+              on:click={() => removeFromFavourite(coin.id)}>{@html '&#10084;'}</button
             >
           </svelte:fragment>
           <svelte:fragment slot="coinName">

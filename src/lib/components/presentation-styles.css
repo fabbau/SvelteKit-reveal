@@ -1,0 +1,24 @@
+.stand-out {
+  padding: 1rem;
+  margin: 1rem !important;
+  background: #00000094;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: whitesmoke;
+}
+.word-stand-out {
+  color: whitesmoke;
+  background: #ff3e068c;
+  padding: 0px 5px;
+  font-weight: bold;
+}
+.bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/src/lib/icons/svelte-machine-d38a22bc.avif);
+  background-size: cover;
+}
+
+.dimbg .slide-background {
+  opacity: 0.2 !important;
+  background: red;
+}

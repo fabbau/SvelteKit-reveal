@@ -1,10 +1,13 @@
-# create-svelte
-
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+> If you want to use the coin section in this app, then you have to do the following:
+
+- Rename the `.env.example` file to `.env`.
+
+- Then add your CMC api key to the file: `CMC_API_KEY='YOUR-KEY'`
+
+
+Once you are done, install the dependencies with `npm install` (or `pnpm install` or `yarn`), then start a development server:
 
 ```bash
 npm run dev

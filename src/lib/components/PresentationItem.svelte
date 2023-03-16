@@ -213,18 +213,20 @@
         class="html"
         data-trim
         data-line-numbers>
-        <script>
-          {`import logoSvelte from '$lib/icons/Svelte_Logo.svg'`}
-        </script>
-  
-        <h2>Hello Svelte</h2>
-        {`<img src={logoSvelte} alt="logo"/>`}
-  
-        <style>
-          h2 {
-            font-size: '1.4rem';
-          }
-       </style>
+        {`
+          <script>
+            import logoSvelte from '$lib/icons/Svelte_Logo.svg'
+          </script>
+    
+          <h2>Hello Svelte</h2>
+          <img src={logoSvelte} alt="logo"/>
+    
+          <style>
+            h2 {
+              font-size: '1.4rem';
+            }
+        </style>
+       `}
       </code>
     </pre>
     <div class="fragment"
@@ -244,7 +246,7 @@
   >
     <h2 data-id="templ">Templating #EACH</h2>
     <iframe
-      style="width: 100%; height: 40vh;"
+      style="width: 100%; height: 50vh;"
       title="svelte each-blocks"
       data-src="https://svelte.dev/repl/334dabd84e454f6898c04e782106b77e?version=3.56.0"
       data-preload
@@ -256,7 +258,7 @@
   >
     <h2 data-id="templ">Templating #AWAIT</h2>
     <iframe
-      style="width: 100%; height: 40vh;"
+      style="width: 100%; height: 50vh;"
       title="svelte await-blocks"
       data-src="https://svelte.dev/repl/3cecb02ab0cc41a9aaab00338ed0a0f0?version=3.56.0"
       data-preload
@@ -298,12 +300,12 @@
         {`
           <script>
             let count = 0;
-          
+
             function handleClick() {
               count += 1;
             }
           </script>
-          
+
           <button on:click={handleClick}>
             Clicked {count} {count === 1 ? 'time' : 'times'}
           </button>

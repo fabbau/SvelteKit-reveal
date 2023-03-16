@@ -12,13 +12,23 @@
   padding: 0px 5px;
   font-weight: bold;
 }
-.bg {
+/* .bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/src/lib/icons/svelte-machine-d38a22bc.avif);
   background-size: cover;
-}
+} */
 
-.dimbg .slide-background {
+/* .dimbg .slide-background {
   opacity: 0.2 !important;
   background: red;
+} */
+
+.reveal a {
+  color: #ff3e00 !important;
+}
+
+.reveal a:hover {
+  color: var(--r-link-color-hover) !important;
+  text-shadow: none;
+  border: none;
 }

@@ -40,3 +40,5 @@ You can preview the production build with `npm run preview`.
 
 ## Icons
 Icons an be retrieved from [Icones JS](https://icones.js.org/)
+## Icons
+Icons an be retrieved from [Icones JS](https://icones.js.org/)

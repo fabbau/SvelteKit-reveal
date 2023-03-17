@@ -1,0 +1,53 @@
+<section>
+  <h2>Resources</h2>
+  <ul>
+    <li>
+      <a
+        href="https://svelte.dev/"
+        target="_blank"
+        rel="noreferrer"
+        >Svelte
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://kit.svelte.dev/"
+        target="_blank"
+        rel="noreferrer"
+        >SvelteKit
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://svelte.dev/repl"
+        target="_blank"
+        rel="noreferrer"
+        >Svelte REPL
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://sveltesociety.dev/"
+        target="_blank"
+        rel="noreferrer"
+        >Svelte Society
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://vercel.com/blog/framework-defined-infrastructure"
+        target="_blank"
+        rel="noreferrer"
+        >Vercel: Framework-defined infrastructure
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://revealjs.com/"
+        target="_blank"
+        rel="noreferrer"
+        >reveal.js
+      </a>
+    </li>
+  </ul>
+</section>

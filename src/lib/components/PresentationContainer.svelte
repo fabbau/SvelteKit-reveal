@@ -10,13 +10,26 @@
     import 'reveal.js/dist/theme/solarized.css';
     import { onMount, onDestroy } from 'svelte';
 
+    import PresentationItemStart from './PresentationItemStart.svelte'
+    import PresentationItemAbout from './PresentationItemAbout.svelte'
+    import PresentationItemKeyFeatures from './PresentationItemKeyFeatures.svelte'
+    import PresentationItemTemplating from './PresentationItemTemplating.svelte'
+    import PresentationItemReactivity from './PresentationItemReactivity.svelte'
+    import PresentationItemStateManagement from './PresentationItemStateManagement.svelte'
+
+
+    import PresentationItemResources from './PresentationItemResources.svelte'
+    
+    
     import PresentationItem from './PresentationItem.svelte'
     import PresentationItem2 from './PresentationItem2.svelte'
   
 
     import parallaxBackground from '$lib/icons/svelte-machine-d38a22bc.avif'
-    import parallaxBackground2 from '$lib/icons/svelte-kit-machine.3af040cb-transparent30.png'
-    import parallaxBackground3 from '$lib/icons/svelte-kit-machine.3af040cb-transparent15.png'
+    import parallaxBackground30 from '$lib/icons/svelte-kit-machine.3af040cb-transparent30.png'
+    import parallaxBackground15 from '$lib/icons/svelte-kit-machine.3af040cb-transparent15.png'
+
+    import './presentation-styles.css'
   
     /**
      * @type {Reveal.Api}
@@ -28,8 +41,8 @@
       deck = new Reveal(document.querySelector('.deck'), {
         
         // Parallax background image
-        parallaxBackgroundImage: `${parallaxBackground3}`,
-        parallaxBackgroundSize: '100vw 100vh', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+        parallaxBackgroundImage: `${parallaxBackground15}`,
+        parallaxBackgroundSize: '120vw 100vh', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
         parallaxBackgroundHorizontal: 50,
         parallaxBackgroundVertical: 50,
 
@@ -60,15 +73,27 @@
   <div class="presentation-wrapper">
     <div class="reveal deck">
       <div class="slides">
+        <PresentationItemStart />
+        <PresentationItemAbout />
+        <PresentationItemKeyFeatures />
+        <PresentationItemTemplating />
+        <PresentationItemReactivity />
+        <PresentationItemStateManagement />
+        
+        <PresentationItemResources />
+
+
         <PresentationItem />
+
         <!-- <PresentationItem2 /> -->
+
       </div>
     </div>
   </div>
   
   <style>
     .presentation-wrapper {
-      height: 50vh;
+      height: 60vh;
       
       /* background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
         url("$lib/icons/Svelte_Logo.svg"); */

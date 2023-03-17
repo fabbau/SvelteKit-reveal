@@ -1,12 +1,8 @@
 <script>
-  import logoSvelte from '$lib/icons/Svelte_Logo.svg'
   import svelteDefinition from '$lib/icons/Svelte_definition.png'
 </script>
 
 <section
-  data-background-image={logoSvelte}
-  data-background-position="top 20px right 20px"
-  data-background-size="50px"
   data-transition="zoom-in"
 >
   <section

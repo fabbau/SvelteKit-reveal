@@ -20,11 +20,11 @@
 
     import PresentationItemResources from './PresentationItemResources.svelte'
     
-    
     import PresentationItem from './PresentationItem.svelte'
     import PresentationItem2 from './PresentationItem2.svelte'
   
 
+    import logoSvelte from '$lib/icons/Svelte_Logo.svg'
     import parallaxBackground from '$lib/icons/svelte-machine-d38a22bc.avif'
     import parallaxBackground30 from '$lib/icons/svelte-kit-machine.3af040cb-transparent30.png'
     import parallaxBackground15 from '$lib/icons/svelte-kit-machine.3af040cb-transparent15.png'
@@ -72,6 +72,7 @@
   
   <div class="presentation-wrapper">
     <div class="reveal deck">
+      <img class="background-logo" src={logoSvelte} alt="svelte logo">
       <div class="slides">
         <PresentationItemStart />
         <PresentationItemAbout />
